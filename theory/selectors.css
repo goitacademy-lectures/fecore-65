@@ -1,0 +1,214 @@
+/* Селектор тега */
+body {
+  /* background-color: tomato; */
+}
+
+/* ul {
+  color: white;
+} */
+
+/* Селектори класів */
+/* .hero .link {
+  text-transform: uppercase;
+} */
+
+/* .list-1 {
+  color: aqua;
+} */
+
+/* .link {
+  font-size: 30px;
+} */
+
+/* Селектори ідентифікаторів */
+/* #section {
+  background-color: lightblue;
+} */
+
+/* Селектор нащадка і селектор дитини */
+/* section a {
+  color: tomato;
+}
+
+section > a {
+  color: blue;
+} */
+
+/* Селектор  атрибуту */
+/* [href="https://"]
+{
+  text-decoration: line-through;
+} */
+
+/* Псевдокласи стану */
+/* .link:hover,
+.link:focus {
+  color: lightgreen;
+} */
+
+/* .link:active {
+  background-color: teal;
+} */
+
+/* .link:visited {
+  color: teal;
+} */
+
+/* .link:focus {
+  color: lightgreen;
+} */
+
+/* .text:hover {
+  color: lightgreen;
+  font-size: 20px;
+} */
+
+/* .button {
+  font-size: 18px;
+  background-color: teal;
+  color: white;
+
+  cursor: pointer;
+} */
+
+/* .button:active {
+  color: red;
+  background-color: blueviolet;
+} */
+
+.text {
+  /* RGB / RGBA формати запису */
+  /* color: rgb(157, 164, 189);
+  color: rgba(157, 164, 189, 0.6); */
+
+  /* HEX формати запису */
+  /* 0-9 / A-F */
+  /*
+  color: #555555;
+  color: #303030;
+
+  background-color: #f7f7f7; */
+}
+
+/**
+  |============================
+  | Каскад
+  |============================
+*/
+
+/* 0001 */
+/* p {
+  color: red;
+} */
+
+/* 0010 */
+/* .text {
+  color: teal;
+} */
+
+/* 0100 */
+/* #text {
+  color: blueviolet;
+} */
+
+/* 0020 */
+/* .hero .text {
+  color: aqua;
+} */
+
+/* 0020 */
+/* .text[class='text'] {
+  color: brown;
+} */
+
+/* Підхід написання селекторів через селектор предка-нащадка */
+.hero .text {
+  color: red;
+}
+
+/* Підхід встановлення унікальних імен класів */
+/* .hero {
+  color: aqua;
+}
+.hero-link {
+  color: aqua;
+}
+.hero-button {
+  color: aqua;
+}
+.hero-list {
+  color: aqua;
+}
+.hero-item {
+  color: aqua;
+}
+.hero-group {
+  color: aqua;
+}
+.hero-title {
+  color: aqua;
+}
+.hero-text {
+  color: aqua;
+}
+
+.about {
+  color: red;
+}
+.about-item {
+  color: red;
+}
+.about-link {
+  color: red;
+} */
+
+/**
+  |============================
+  |Спадкування
+  |============================
+*/
+body {
+  color: #303030;
+  font-size: 20px;
+}
+
+.hero {
+  color: red;
+}
+
+.hero-item {
+  color: teal;
+}
+
+.hero-link {
+  color: currentColor;
+}
+
+.hero-title {
+  /* font-size: inherit; */
+}
+
+.hero-text {
+  color: blue;
+  color: red;
+  color: blueviolet;
+}
+
+/**
+  |============================
+  | Семанатичне приховування заголовків
+  |============================
+*/
+
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}

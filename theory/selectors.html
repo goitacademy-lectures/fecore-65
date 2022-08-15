@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Selectors</title>
+
+    <!-- Вбудована таблиця стилей (embededd) -->
+    <!-- <style>
+      ul {
+        color: violet;
+        font-size: 20px;
+      }
+
+      li {
+        text-transform: uppercase;
+      }
+
+      .text {
+        font-size: 30px;
+      }
+    </style> -->
+
+    <!-- Зовнішня таблиця стилей піключається за допомогою тега link -->
+    <link rel="stylesheet" href="./selectors.css" />
+  </head>
+  <body>
+    <section class="hero" id="section">
+      <a class="hero-link" href="https://">logo</a>
+      <button class="hero-button" type="button">button 1</button>
+      <button class="hero-button" type="button">buton 2</button>
+
+      <ul class="hero-list">
+        <li class="hero-item">
+          <a class="hero-link" href="https://instagram.com">Instagram</a>
+        </li>
+        <li class="hero-item">
+          <a class="hero-link" href="https://">Link 2</a>
+        </li>
+        <li class="hero-item">
+          <a class="hero-link" href="">Link 3</a>
+        </li>
+      </ul>
+
+      <div class="hero-group">
+        <h1 class="hero-title visually-hidden">Lorem ipsum dolor sit amet.</h1>
+        <p class="hero-text">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia voluptates vero at
+          similique ipsa facilis vitae temporibus. Porro id repellendus molestiae provident quos
+          voluptas earum totam, minus omnis. Laborum, dignissimos?
+        </p>
+      </div>
+    </section>
+
+    <section class="about">
+      <ul class="about">
+        <li class="about-item">
+          <a class="about-link" href="">Link 1</a>
+        </li>
+        <li class="about-item">
+          <a class="about-link" href="">Link 2</a>
+        </li>
+        <li class="about-item">
+          <a class="about-link" href="">Link 3</a>
+        </li>
+      </ul>
+    </section>
+  </body>
+</html>
