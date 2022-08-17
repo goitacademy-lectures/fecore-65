@@ -1,0 +1,128 @@
+:root {
+  /* Fonts */
+  --main-font: 'Open Sans', sans-serif;
+  --secondary-font: 'Raleway', sans-serif;
+
+  /* Text colors */
+  --main-txt-cl: #303030;
+  --light-txt-cl: #ffffff;
+  --accent-txt-cl: #ff6c00;
+  --grey-txt-cl: #9da4bd;
+  --grey-txt-cl-60: rgba(157, 164, 189, 0.6);
+
+  /* Background colors */
+  --accent-bg-cl: #ff6c00;
+
+  /* Others */
+}
+
+.page {
+  font-family: var(--main-font);
+  font-size: 18px;
+  line-height: calc(30 / 18);
+  letter-spacing: 0.02em;
+  color: var(--main-txt-cl);
+}
+
+/* reset */
+.link {
+  text-decoration: none;
+  color: currentColor;
+}
+
+.list {
+  list-style: none;
+}
+
+/**
+  |============================
+  | Header
+  |============================
+*/
+.header {
+  background-color: #191c26;
+}
+
+.header .link {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: calc(16 / 12);
+  letter-spacing: 0.1em;
+
+  color: var(--light-txt-cl);
+}
+
+.header .link:hover,
+.header .link:focus {
+  color: var(--accent-txt-cl);
+}
+
+.header .btn {
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: calc(16 / 12);
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+
+  color: var(--light-txt-cl);
+  background-color: transparent;
+
+  cursor: pointer;
+}
+
+/**
+  |============================
+  | Hero
+  |============================
+*/
+.hero {
+  background-color: #191c26;
+}
+
+.hero-link {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: calc(15 / 11);
+  letter-spacing: 0.2em;
+}
+
+.hero-link:hover,
+.hero-link:focus {
+  color: var(--accent-txt-cl);
+}
+
+.hero-undertitle {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: calc(15 / 11);
+  text-transform: uppercase;
+  color: var(--grey-txt-cl-60);
+}
+
+.hero-title {
+  font-family: var(--secondary-font);
+  font-size: 72px;
+  line-height: 85px;
+  letter-spacing: 0.05em;
+  color: var(--light-txt-cl);
+}
+
+.hero-subtitle {
+  color: var(--grey-txt-cl);
+}
+
+.slider-btn {
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: calc(15 / 11);
+  letter-spacing: 0.1em;
+  color: var(--grey-txt-cl-60);
+
+  background-color: transparent;
+}
+
+.slider-btn.active {
+  color: var(--light-txt-cl);
+}
