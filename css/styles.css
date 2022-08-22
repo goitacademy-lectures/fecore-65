@@ -33,6 +33,21 @@ body {
   letter-spacing: 0.02em;
 }
 
+/* reset */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+img {
+  display: block;
+}
+
 .link {
   text-decoration: none;
   color: currentColor;
@@ -40,9 +55,13 @@ body {
 
 .list {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .main-title {
+  margin-bottom: 20px;
+
   font-family: var(--secondary-font);
   font-size: 72px;
   line-height: calc(85 / 72);
@@ -51,6 +70,8 @@ body {
 }
 
 .uppertitle {
+  margin-bottom: 20px;
+
   font-weight: 600;
   font-size: 11px;
   line-height: calc(15 / 11);
@@ -63,6 +84,7 @@ body {
 }
 
 .title {
+  margin-bottom: 20px;
   font-family: var(--secondary-font);
   font-size: 42px;
   line-height: calc(49 / 42);
@@ -74,6 +96,7 @@ body {
 }
 
 .undertitle {
+  margin-bottom: 20px;
   color: var(--dark-txt-cl);
 }
 
@@ -82,6 +105,9 @@ body {
 }
 
 .btn {
+  width: 160px;
+  min-height: 40px;
+  padding: 10px 16px;
   font-family: inherit;
   font-weight: 600;
   font-size: 12px;
@@ -91,6 +117,8 @@ body {
   color: var(--main-txt-cl);
 
   background-color: transparent;
+  border: 1px solid var(--accent-bg-cl);
+  border-radius: var(--btn-radius);
   cursor: pointer;
 }
 
@@ -119,6 +147,7 @@ body {
 
 .header-nav-link,
 .header-contact {
+  margin-right: 40px;
   font-weight: 600;
   font-size: 12px;
   line-height: 1.33;
@@ -175,7 +204,13 @@ body {
   | About
   |============================
 */
+.about-right-side {
+  width: 470px;
+}
+
 .about-desc {
+  margin-bottom: 42px;
+
   font-size: 14px;
   line-height: calc(26 / 14);
   letter-spacing: 0.02em;
