@@ -2,8 +2,8 @@
 
 Заняття 6:
 
-- Елемент "контейнер"
 - Структурні псевдокласи: first/last-сhild, nth-child/nth-last-child
+- Елемент "контейнер"
 
 - flex-контейнер та flex-елемент
 - Властивість display:flex|inline-flex

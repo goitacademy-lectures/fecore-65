@@ -59,6 +59,22 @@ img {
   padding: 0;
 }
 
+.section {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+
+  outline: 2px solid red;
+  outline-offset: -2px;
+}
+
 .main-title {
   margin-bottom: 20px;
 
@@ -92,6 +108,7 @@ img {
 }
 
 .title-theme-dark {
+  margin-bottom: 44px;
   color: var(--light-txt-cl);
 }
 
@@ -136,6 +153,16 @@ img {
   background-color: var(--accent-bg-cl);
 }
 
+/* media links */
+.media-list {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.media-link {
+  display: block;
+}
 /**
   |============================
   | Header
@@ -145,15 +172,50 @@ img {
   background-color: var(--dark-bg-cl);
 }
 
+.header-container {
+  display: flex;
+  align-items: center;
+}
+
+.header-link {
+  margin-right: 132px;
+}
+
+.header-nav {
+  margin-right: auto;
+}
+
+.header-list {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+/* .header-item:not(:last-child) {
+  margin-right: 30px;
+} */
+
 .header-nav-link,
 .header-contact {
-  margin-right: 40px;
+  display: block;
+  padding-top: 52px;
+  padding-bottom: 52px;
+
   font-weight: 600;
   font-size: 12px;
   line-height: 1.33;
   letter-spacing: 0.1em;
 
   color: var(--light-txt-cl);
+}
+
+.header-group {
+  display: flex;
+  align-items: center;
+}
+
+.header-contact {
+  margin-right: 40px;
 }
 
 .header-nav-link:hover,
@@ -204,6 +266,16 @@ img {
   | About
   |============================
 */
+.about-container {
+  display: flex;
+  gap: 30px;
+}
+
+.about-list {
+  display: flex;
+  gap: 30px;
+}
+
 .about-right-side {
   width: 470px;
 }
@@ -226,8 +298,38 @@ img {
   background-color: var(--dark-bg-cl);
 }
 
+.price-block {
+  display: flex;
+  justify-content: space-between;
+
+  margin-bottom: 44px;
+}
+
+.price-list {
+  flex-basis: 570px;
+  padding: 30px 20px;
+}
+
+.price-list:first-child {
+  outline: 1px solid blue;
+}
+.price-list:last-child {
+  outline: 1px solid greenyellow;
+}
+
 .price-item {
+  margin-bottom: 20px;
   color: var(--grey-cl);
+}
+
+.price-item:last-child {
+  margin-bottom: 0;
+}
+
+.price-btn {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /**
@@ -235,6 +337,21 @@ img {
   | Benefits
   |============================
 */
+.benefits-container {
+  display: flex;
+}
+
+.benefits-left-side {
+  flex-basis: 50%;
+}
+
+.benefits-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+
+  width: 370px;
+}
 .benefits-quantity {
   font-weight: 700;
   font-size: 42px;
@@ -251,6 +368,10 @@ img {
   line-height: calc(22 / 16);
   text-align: center;
   color: #ff6c00;
+}
+
+.benefits-right-side {
+  flex-basis: 500px;
 }
 
 .benefits-text {
@@ -271,6 +392,7 @@ img {
 }
 
 .team-name {
+  margin-bottom: 8px;
   font-weight: 400;
   font-size: 18px;
   line-height: calc(25 / 18);
@@ -299,13 +421,27 @@ img {
 .contatcs-group {
   background-color: var(--dark-bg-cl);
 }
+
+.booking,
+.contacts {
+  flex-basis: 50%;
+}
 /**
   |============================
   | Contatcs
   |============================
 */
+.contatcs-group-container {
+  display: flex;
+}
+
 .contacts-address {
   font-style: normal;
+  margin-bottom: 70px;
+}
+
+.contacts-item:not(:last-child) {
+  margin-bottom: 20px;
 }
 
 .contacts-link {
@@ -313,12 +449,6 @@ img {
 }
 
 .contacts-uppertitle {
-  font-weight: 600;
-  font-size: 11px;
-  line-height: calc(15 / 11);
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-
   color: var(--light-txt-cl);
 }
 
@@ -330,7 +460,18 @@ img {
   | Footer
   |============================
 */
+.footer {
+  padding-top: 56px;
+  padding-bottom: 56px;
+}
+.footer-container {
+  display: flex;
+  align-items: center;
+}
+
 .footer-copyright {
+  margin-right: auto;
+
   font-weight: 600;
   font-size: 11px;
   line-height: calc(15 / 11);

@@ -1,0 +1,148 @@
+:root {
+  --color-1: #186cb8;
+  --color-2: #2a9a9f;
+  --color-3: #f1b211;
+  --color-4: #f9002f;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.group {
+  width: 900px;
+  height: 400px;
+
+  outline: 2px solid red;
+  outline-offset: -2px;
+}
+.box {
+  width: 150px;
+  height: 150px;
+
+  font-size: 2em;
+  color: white;
+  text-align: center;
+  line-height: 150px;
+
+  border-radius: 10px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+/**
+  |============================
+  | Структурні псевдокласи
+  |============================
+*/
+/* .box:not(:last-child) {
+  margin-bottom: 40px;
+} */
+
+.box:first-child {
+  background-color: var(--color-1);
+}
+.box:nth-child(2n) {
+  background-color: var(--color-2);
+}
+.box:nth-child(2n + 1) {
+  background-color: var(--color-3);
+}
+/* .box:last-child {
+  background-color: var(--color-4);
+} */
+
+/* парні елементи */
+/* .box:nth-child(2n) {
+  background-color: var(--color-2);
+} */
+/* .box:nth-child(even) {
+  background-color: var(--color-2);
+} */
+
+/* не парні елементи */
+/* .box:nth-child(2n + 1) {
+  background-color: var(--color-3);
+} */
+
+/* .box:nth-child(odd) {
+  background-color: var(--color-3);
+} */
+/*
+.box:nth-child(4n + 4) {
+  background-color: var(--color-4);
+} */
+
+/*
+  a - період циклу
+  n - лічильник циклу
+  b - зміщення
+
+  :nth-child(a*n + b)
+
+  .box:nth-child(2)
+
+  a = 1
+
+  n = 0
+
+  b = 2
+
+*/
+
+/**
+  |============================
+  | Flex box layout
+  |============================
+*/
+
+/* flex-box container властивості */
+.group {
+  display: flex;
+  /* flex-wrap: wrap; */
+  /* gap: 20px; */
+
+  /* row-gap: 50px;
+  column-gap: 20px; */
+
+  /* flex-direction: column; */
+  /* justify-content: flex-start; */
+  /* align-items: stretch; */
+}
+
+/* flex-box elements властивості */
+.box {
+  /* flex-grow: 0; */
+  /* flex-shrink: 1; */
+  /* width: 150px;
+  flex-basis: 200px; */
+  /* order: 0; */
+  /* align-self: ; */
+}
+
+/* змусить елементи ворости */
+/* .box:first-child {
+  flex-grow: 1;
+}
+.box:last-child {
+  flex-grow: 2;
+} */
+
+/* змусить елементи зжиматись */
+/* .box:first-child {
+  flex-shrink: 0;
+} */
+/* .box:last-child {
+  flex-shrink: 0;
+} */
+
+/* .box:nth-child(2) {
+  order: -1;
+} */
+
+/* .box:nth-child(2) {
+  align-self: flex-end;
+} */
