@@ -1,20 +1,16 @@
 # fe-core-65
 
-Заняття 4:
+Заняття 6:
 
-- CSS-змінні та селектор :root
-- Властивості оформелння тексту: text-align, text-decoration, text-transform, text-indent,
-  line-height, letter-spacing, word-spacing, text-shadow
-- Сімейства шрифту serif та sans-serif
-- Властивості оформлення шрифту: font-size, font-weight, font-style, font-family
-- Псевдоелементи текстового контенту ::firstLetter та ::selection
-- Підключення зовнішніх шрифтів через GoogleFonts
+- Структурні псевдокласи: first/last-сhild, nth-child/nth-last-child
+- Елемент "контейнер"
 
-Додатково:
-
-- Як винести загальні властивості кольорів та набори шрифтів в змінні
-- Підключення шрифтів з GoogleFonts, опції (жирність, стиль, символи)
-- Підключення набору з декількох шрифтів одним посиланням
+- flex-контейнер та flex-елемент
+- Властивість display:flex|inline-flex
+- Flex-вісі та властивість flex-direction
+- Вирівнювання flex-елементів на вісі, властивості justify-content, align-items
+- Багаторядкові flex-контейнери та властивість flex-wrap
+- Властивість flex-елемента: width та flex-basis, flex-grow, flex-shrink
 
 ---
 
