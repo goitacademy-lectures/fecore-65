@@ -18,6 +18,8 @@
 
   /* Others */
   --btn-radius: 25px;
+  --items: 3;
+  --indent: 30px;
 }
 
 /**
@@ -70,9 +72,9 @@ img {
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
-
+  /*
   outline: 2px solid red;
-  outline-offset: -2px;
+  outline-offset: -2px; */
 }
 
 .main-title {
@@ -86,6 +88,9 @@ img {
 }
 
 .uppertitle {
+  display: flex;
+  align-items: center;
+  gap: 20px;
   margin-bottom: 20px;
 
   font-weight: 600;
@@ -95,8 +100,22 @@ img {
   text-transform: uppercase;
 }
 
+.uppertitle::before {
+  content: '';
+  display: block;
+
+  width: 60px;
+  height: 1px;
+
+  background-color: var(--main-txt-cl);
+}
+
 .uppertitle-theme-dark {
   color: var(--grey-cl-60);
+}
+
+.uppertitle-theme-dark::before {
+  background-color: var(--grey-cl-60);
 }
 
 .title {
@@ -153,11 +172,34 @@ img {
   background-color: var(--accent-bg-cl);
 }
 
+/**
+  |============================
+  | Card set
+  |============================
+*/
+.card-set {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--indent);
+}
+
+.card-set-item {
+  flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
+}
+
 /* media links */
 .media-list {
   display: flex;
   align-items: center;
   gap: 40px;
+}
+
+.media-list::before {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 1px;
+  background-color: var(--main-txt-cl);
 }
 
 .media-link {
@@ -295,7 +337,15 @@ img {
   |============================
 */
 .price {
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+
   background-color: var(--dark-bg-cl);
+  background-image: url(../images/price/price-bg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .price-block {
@@ -311,19 +361,36 @@ img {
 }
 
 .price-list:first-child {
-  outline: 1px solid blue;
+  background-image: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
 }
 .price-list:last-child {
-  outline: 1px solid greenyellow;
+  background-image: linear-gradient(180deg, #090b13 0%, rgba(9, 11, 19, 0.2) 100%);
 }
 
 .price-item {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
   margin-bottom: 20px;
   color: var(--grey-cl);
 }
 
+.price-item::before {
+  content: '';
+  display: block;
+  height: 1px;
+
+  flex-grow: 1;
+
+  background-color: rgba(157, 164, 189, 0.12);
+}
+
 .price-item:last-child {
   margin-bottom: 0;
+}
+
+.price-item-serv {
+  order: -1;
 }
 
 .price-btn {
@@ -391,6 +458,20 @@ img {
   background-color: #f7f7f7;
 }
 
+/* .team-list {
+  --items: 3;
+} */
+
+/* .team-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--indent);
+}
+
+.team-item {
+  flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
+} */
+
 .team-name {
   margin-bottom: 8px;
   font-weight: 400;
@@ -413,18 +494,32 @@ img {
   | Gallery
   |============================
 */
+.gallery-list {
+  --items: 4;
+}
 /**
   |============================
   | Booking
   |============================
 */
 .contatcs-group {
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+
   background-color: var(--dark-bg-cl);
+  background-image: url(../images/contatcs/contacts-bg.png);
+  background-repeat: no-repeat;
+  background-position: left calc(50% + 410px) top;
 }
 
 .booking,
 .contacts {
   flex-basis: 50%;
+}
+
+.contacts {
+  padding-left: 100px;
 }
 /**
   |============================
