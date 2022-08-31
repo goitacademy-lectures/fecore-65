@@ -223,6 +223,10 @@ img {
   margin-right: 132px;
 }
 
+.header-logo {
+  fill: var(--main-txt-cl);
+}
+
 .header-nav {
   margin-right: auto;
 }
@@ -274,6 +278,11 @@ img {
 */
 .hero {
   background-color: #191c26;
+
+  /* background-image: url(../images/icons/logo.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top right; */
 }
 
 .media-link {
@@ -471,6 +480,16 @@ img {
 .team-item {
   flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
 } */
+/*
+.team-item {
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4), 6px 6px 10px rgba(0, 0, 0, 0.2);
+} */
+
+.team-wrap {
+  padding-top: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
 
 .team-name {
   margin-bottom: 8px;
@@ -482,6 +501,8 @@ img {
 }
 
 .team-position {
+  margin-bottom: 30px;
+
   font-size: 14px;
   line-height: calc(19 / 14);
   text-align: center;
@@ -489,6 +510,48 @@ img {
 
   color: var(--accent-txt-cl);
 }
+
+/* socials */
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.socials-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 44px;
+  height: 44px;
+
+  color: var(--main-txt-cl);
+  background-color: var(--light-txt-cl);
+  border-radius: 50%;
+}
+
+/* варіант для лінивих */
+.socials-link:hover,
+.socials-link:focus {
+  color: var(--accent-bg-cl);
+  background-color: lightblue;
+}
+
+.socials-icon {
+  fill: currentColor;
+}
+
+/* розширений варіант зміни кольору іконки */
+/*
+.socials-icon {
+  fill: var(--main-txt-cl);
+}
+.socials-link:hover .socials-icon,
+.socials-link:focus .socials-icon {
+  fill: var(--accent-bg-cl);
+} */
+
 /**
   |============================
   | Gallery
@@ -520,6 +583,21 @@ img {
 
 .contacts {
   padding-left: 100px;
+}
+
+.contacts-link {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.contacts-item:first-child .contacts-link {
+  align-items: flex-start;
+}
+
+.contacts-icon {
+  fill: none;
+  stroke: var(--grey-cl);
 }
 /**
   |============================
@@ -574,3 +652,26 @@ img {
 
   color: var(--grey-cl);
 }
+
+/* .svg-element {
+  animation: rotation linear 2s infinite;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+} */
+
+/* .antena {
+  --color1: red;
+  --color2: teal;
+}
+.antena:hover {
+  --color1: lightblue;
+  --color2: hotpink;
+} */
