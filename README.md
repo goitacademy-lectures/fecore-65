@@ -1,16 +1,14 @@
 # fe-core-65
 
-Заняття 6:
+Заняття 8:
 
-- Структурні псевдокласи: first/last-сhild, nth-child/nth-last-child
-- Елемент "контейнер"
+- CSS-тіні та властивість box-shadow
 
-- flex-контейнер та flex-елемент
-- Властивість display:flex|inline-flex
-- Flex-вісі та властивість flex-direction
-- Вирівнювання flex-елементів на вісі, властивості justify-content, align-items
-- Багаторядкові flex-контейнери та властивість flex-wrap
-- Властивість flex-елемента: width та flex-basis, flex-grow, flex-shrink
+- Векторна графіка
+- Основні SVG-фігури
+- Способи використання SVG: як img • як фонове зображення • вбудовування inline-svg
+- Атрибут aria-label для елементів без текстового контенту (кнопка-іконка)
+- Створення і робота з SVG-спрайтом
 
 ---
 

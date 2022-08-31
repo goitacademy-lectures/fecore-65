@@ -38,13 +38,23 @@
     <header class="header">
       <div class="container header-container">
         <a class="header-link" href="">
-          <img
+          <!-- <img
             class="header-logo"
             src="./images/header/page-logo.png"
             alt="BarberSop logo"
             width="68"
             height="56"
-          />
+          /> -->
+          <!-- <img
+            class="header-logo"
+            src="./images/icons/logo.svg"
+            alt="BarberSop logo"
+            width="68"
+            height="56"
+          /> -->
+          <svg class="header-logo" width="69" height="56">
+            <use href="./images/sprite.svg#logo"></use>
+          </svg>
         </a>
         <nav class="header-nav">
           <ul class="list header-list">
@@ -146,17 +156,36 @@
           <h2 class="title title-theme-dark">Services and prices</h2>
           <div class="price-block">
             <ul class="price-list list">
-              <li class="price-item">Men’s haircut from 300 uah.</li>
-              <li class="price-item">Beard trim from 300 uah.</li>
-              <li class="price-item">Mustache trim from 200 uah.</li>
-              <li class="price-item">Straight razor shave from 200 uah.</li>
+              <li class="price-item">
+                <span class="price-item-serv">Men’s haircut</span><span>from 300 uah.</span>
+              </li>
+              <li class="price-item">
+                <span class="price-item-serv">Beard trim</span> <span>from 300 uah.</span>
+              </li>
+              <li class="price-item">
+                <span class="price-item-serv">Mustache trim</span> <span>from 200 uah.</span>
+              </li>
+              <li class="price-item">
+                <span class="price-item-serv">Straight razor shave</span> <span>from 200 uah.</span>
+              </li>
             </ul>
 
             <ul class="price-list list">
-              <li class="price-item">Trainee’s haircut from 50 uah.</li>
-              <li class="price-item">Haircut under the nozzle from 200 uah.</li>
-              <li class="price-item">Children’s haircut (0-12 y.o.) from 300 uah.</li>
-              <li class="price-item">Camouflage of gray hair from 200 uah.</li>
+              <li class="price-item">
+                <span class="price-item-serv">Trainee’s haircut</span> <span>from 50 uah.</span>
+              </li>
+              <li class="price-item">
+                <span class="price-item-serv">Haircut under the nozzle</span>
+                <span>from 200 uah.</span>
+              </li>
+              <li class="price-item">
+                <span class="price-item-serv">Children’s haircut (0-12 y.o.)</span>
+                <span>from 300 uah.</span>
+              </li>
+              <li class="price-item">
+                <span class="price-item-serv">Camouflage of gray hair</span>
+                <span>from 200 uah.</span>
+              </li>
             </ul>
           </div>
           <button class="btn btn-theme-dark price-btn" type="button">online-booking</button>
@@ -200,147 +229,189 @@
         <div class="container">
           <p class="uppertitle">for true enjoyers of the atmosphere</p>
           <h2 class="title">Our barbers</h2>
-          <ul class="team-list list">
-            <li class="team-item">
+          <ul class="team-list list card-set">
+            <li class="team-item card-set-item">
               <img src="./images/team/img-1.jpg" alt="John Smith" width="370" height="346" />
-              <h3 class="team-name">John Smith</h3>
-              <p class="team-position">Extreme Barber</p>
-              <ul class="socials list">
-                <li class="socials-item">
-                  <a
-                    class="socials-link link"
-                    href="https://instagram.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Instagram"
-                  >
-                  </a>
-                </li>
-                <li class="socials-item">
-                  <a
-                    class="socials-link link"
-                    href="https://twitter.com"
-                    aria-label="Twitter"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                  </a>
-                </li>
-                <li class="socials-item">
-                  <a
-                    class="socials-link link"
-                    href="https://facebook.com"
-                    aria-label="Facebook"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                  </a>
-                </li>
-                <li class="socials-item">
-                  <a
-                    class="socials-link link"
-                    href="https://linkedin.com"
-                    aria-label="LinkedIn"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                  </a>
-                </li>
-              </ul>
+              <div class="team-wrap">
+                <h3 class="team-name">John Smith</h3>
+                <p class="team-position">Extreme Barber</p>
+                <ul class="socials list">
+                  <li class="socials-item">
+                    <a
+                      class="socials-link link"
+                      href="https://instagram.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Instagram"
+                    >
+                      <svg class="socials-icon" width="20" height="20">
+                        <use href="./images/sprite.svg#instagram"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="socials-item">
+                    <a
+                      class="socials-link link"
+                      href="https://twitter.com"
+                      aria-label="Twitter"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <svg class="socials-icon" width="20" height="20">
+                        <use href="./images/sprite.svg#twitter"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="socials-item">
+                    <a
+                      class="socials-link link"
+                      href="https://facebook.com"
+                      aria-label="Facebook"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <svg class="socials-icon" width="20" height="20">
+                        <use href="./images/sprite.svg#facebook"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="socials-item">
+                    <a
+                      class="socials-link link"
+                      href="https://linkedin.com"
+                      aria-label="LinkedIn"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <svg class="socials-icon" width="20" height="20">
+                        <use href="./images/sprite.svg#linkedin"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </li>
-            <li class="team-item">
+            <li class="team-item card-set-item">
               <img src="./images/team/img-2.jpg" alt="Michele Doe" width="370" height="346" />
-              <h3 class="team-name">Michele Doe</h3>
-              <p class="team-position">Extreme Barber</p>
-              <ul class="socials list">
-                <li class="socials-item">
-                  <a
-                    class="socials-link link"
-                    href="https://instagram.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Instagram"
-                  >
-                  </a>
-                </li>
-                <li class="socials-item">
-                  <a
-                    class="socials-link link"
-                    href="https://twitter.com"
-                    aria-label="Twitter"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                  </a>
-                </li>
-                <li class="socials-item">
-                  <a
-                    class="socials-link link"
-                    href="https://facebook.com"
-                    aria-label="Facebook"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                  </a>
-                </li>
-                <li class="socials-item">
-                  <a
-                    class="socials-link link"
-                    href="https://linkedin.com"
-                    aria-label="LinkedIn"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                  </a>
-                </li>
-              </ul>
+              <div class="team-wrap">
+                <h3 class="team-name">Michele Doe</h3>
+                <p class="team-position">Extreme Barber</p>
+                <ul class="socials list">
+                  <li class="socials-item">
+                    <a
+                      class="socials-link link"
+                      href="https://instagram.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Instagram"
+                    >
+                      <svg class="socials-icon" width="20" height="20">
+                        <use href="./images/sprite.svg#instagram"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="socials-item">
+                    <a
+                      class="socials-link link"
+                      href="https://twitter.com"
+                      aria-label="Twitter"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <svg class="socials-icon" width="20" height="20">
+                        <use href="./images/sprite.svg#twitter"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="socials-item">
+                    <a
+                      class="socials-link link"
+                      href="https://facebook.com"
+                      aria-label="Facebook"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <svg class="socials-icon" width="20" height="20">
+                        <use href="./images/sprite.svg#facebook"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="socials-item">
+                    <a
+                      class="socials-link link"
+                      href="https://linkedin.com"
+                      aria-label="LinkedIn"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <svg class="socials-icon" width="20" height="20">
+                        <use href="./images/sprite.svg#linkedin"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </li>
-            <li class="team-item">
+            <li class="team-item card-set-item">
               <img src="./images/team/img-3.jpg" alt="Alan Black" width="370" height="346" />
-              <h3 class="team-name">Alan Black</h3>
-              <p class="team-position">Extreme Barber</p>
-              <ul class="socials list">
-                <li class="socials-item">
-                  <a
-                    class="socials-link link"
-                    href="https://instagram.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Instagram"
-                  >
-                  </a>
-                </li>
-                <li class="socials-item">
-                  <a
-                    class="socials-link link"
-                    href="https://twitter.com"
-                    aria-label="Twitter"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                  </a>
-                </li>
-                <li class="socials-item">
-                  <a
-                    class="socials-link link"
-                    href="https://facebook.com"
-                    aria-label="Facebook"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                  </a>
-                </li>
-                <li class="socials-item">
-                  <a
-                    class="socials-link link"
-                    href="https://linkedin.com"
-                    aria-label="LinkedIn"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                  </a>
-                </li>
-              </ul>
+              <div class="team-wrap">
+                <h3 class="team-name">Alan Black</h3>
+                <p class="team-position">Extreme Barber</p>
+                <ul class="socials list">
+                  <li class="socials-item">
+                    <a
+                      class="socials-link link"
+                      href="https://instagram.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Instagram"
+                    >
+                      <svg class="socials-icon" width="20" height="20">
+                        <use href="./images/sprite.svg#instagram"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="socials-item">
+                    <a
+                      class="socials-link link"
+                      href="https://twitter.com"
+                      aria-label="Twitter"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <svg class="socials-icon" width="20" height="20">
+                        <use href="./images/sprite.svg#twitter"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="socials-item">
+                    <a
+                      class="socials-link link"
+                      href="https://facebook.com"
+                      aria-label="Facebook"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <svg class="socials-icon" width="20" height="20">
+                        <use href="./images/sprite.svg#facebook"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="socials-item">
+                    <a
+                      class="socials-link link"
+                      href="https://linkedin.com"
+                      aria-label="LinkedIn"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <svg class="socials-icon" width="20" height="20">
+                        <use href="./images/sprite.svg#linkedin"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </li>
           </ul>
         </div>
@@ -350,8 +421,8 @@
         <div class="container">
           <p class="uppertitle">in Latin, "barba" means "beard"</p>
           <h2 hidden>Our gallery</h2>
-          <ul class="gallery-list list">
-            <li class="gallery-item">
+          <ul class="gallery-list list card-set">
+            <li class="gallery-item card-set-item">
               <img
                 class="gallery-img"
                 src="./images/gallery/gallery-img-1.jpg"
@@ -360,7 +431,7 @@
                 height="360"
               />
             </li>
-            <li class="gallery-item">
+            <li class="gallery-item card-set-item">
               <img
                 class="gallery-img"
                 src="./images/gallery/gallery-img-2.jpg"
@@ -369,7 +440,7 @@
                 height="360"
               />
             </li>
-            <li class="gallery-item">
+            <li class="gallery-item card-set-item">
               <img
                 class="gallery-img"
                 src="./images/gallery/gallery-img-3.jpg"
@@ -378,7 +449,7 @@
                 height="360"
               />
             </li>
-            <li class="gallery-item">
+            <li class="gallery-item card-set-item">
               <img
                 class="gallery-img"
                 src="./images/gallery/gallery-img-4.jpg"
@@ -407,21 +478,38 @@
                     target="_blank"
                     rel="noopener noreferrer"
                   >
+                    <svg class="contacts-icon" width="24" height="24">
+                      <use href="./images/sprite.svg#map-pin"></use>
+                    </svg>
                     st. Vasilkovaya, 7A <br />
                     Kiev, 08132
                   </a>
                 </li>
                 <li class="contacts-item">
-                  <a class="contacts-link link" href="tel:+380441111111">+38 044 111 11 11 </a>
+                  <a class="contacts-link link" href="tel:+380441111111">
+                    <svg class="contacts-icon" width="24" height="24">
+                      <use href="./images/sprite.svg#phone"></use>
+                    </svg>
+                    +38 044 111 11 11
+                  </a>
                 </li>
                 <li class="contacts-item">
-                  <a class="contacts-link link" href="mailto:barbershop@email.com"
-                    >barbershop@email.com
+                  <a class="contacts-link link" href="mailto:barbershop@email.com">
+                    <svg class="contacts-icon" width="24" height="24">
+                      <use href="./images/sprite.svg#mail"></use>
+                    </svg>
+                    barbershop@email.com
                   </a>
                 </li>
               </ul>
             </address>
             <div>
+              <!-- <svg class="antena" width="70" height="70">
+                <use href="./images/icons/symbol-defs.svg#antenna"></use>
+              </svg>
+              <svg width="106" height="60">
+                <use href="./images/sprite.svg#logo-1"></use>
+              </svg> -->
               <p class="contacts-uppertitle uppertitle uppertitle-theme-dark">working hours</p>
               <p class="contacts-schedule">
                 Every day from <time datetime="09:00">9:00</time> to
