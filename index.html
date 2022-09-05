@@ -74,7 +74,7 @@
         </nav>
         <div class="header-group">
           <a class="header-contact link" href="tel:+380441111111">+38 044 111 11 11</a>
-          <button class="btn btn-theme-dark" type="button">Online-booking</button>
+          <button class="btn btn-theme-dark" type="button" data-modal-open>Online-booking</button>
         </div>
       </div>
     </header>
@@ -82,31 +82,38 @@
     <main>
       <!-- Hero section -->
       <section class="hero">
-        <div class="container">
-          <ul class="media-list list">
-            <li class="media-item">
-              <a class="media-link link" href="">Instagram</a>
-            </li>
-            <li class="media-item">
-              <a class="media-link link" href="">Youtube</a>
-            </li>
-          </ul>
+        <div class="container hero-container">
+          <div class="hero-left-side">
+            <ul class="media-list list">
+              <li class="media-item">
+                <a class="media-link link" href="">Instagram</a>
+              </li>
+              <li class="media-item">
+                <a class="media-link link" href="">Youtube</a>
+              </li>
+            </ul>
+          </div>
 
           <div class="hero-right-side">
             <p class="uppertitle uppertitle-theme-dark">A hair salon for men in Kyiv</p>
             <h1 class="main-title">BarberShop</h1>
-            <p class="undertitle undertitle-theme-dark"
+            <p class="hero-undertitle undertitle undertitle-theme-dark"
               >We are experts in trendy men’s haircuts. We work quickly, carefully and with style.
             </p>
           </div>
 
           <ul class="slider-list list">
             <li class="slider-item">
-              <button class="slider-btn" type="button">Back</button>
+              <button class="slider-btn disabled" type="button">Back</button>
             </li>
             <li class="slider-item">
               <button class="slider-btn" type="button">Forward</button>
             </li>
+          </ul>
+          <ul class="slider-pagination list">
+            <li class="slider-pagination-item active"></li>
+            <li class="slider-pagination-item"></li>
+            <li class="slider-pagination-item"></li>
           </ul>
         </div>
       </section>
@@ -534,5 +541,19 @@
         </ul>
       </div>
     </footer>
+
+    <!-- Modal window -->
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button class="modal-btn" type="button" data-modal-close>
+          X
+          <!-- <svg width="20" height="20">
+            <use href=""></use>
+          </svg> -->
+        </button>
+      </div>
+    </div>
+
+    <script src="./js/modal.js"></script>
   </body>
 </html>

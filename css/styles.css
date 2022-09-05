@@ -15,6 +15,7 @@
   /* BG colors */
   --dark-bg-cl: #191c26;
   --accent-bg-cl: #ff6c00;
+  --light-cl: #ffffff;
 
   /* Others */
   --btn-radius: 25px;
@@ -211,7 +212,16 @@ img {
   |============================
 */
 .header {
-  background-color: var(--dark-bg-cl);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  z-index: 100;
+
+  /* background-color: var(--dark-bg-cl); */
+
+  /* outline: 1px solid #ff6c00; */
 }
 
 .header-container {
@@ -258,6 +268,7 @@ img {
 .header-group {
   display: flex;
   align-items: center;
+  padding-right: 15px;
 }
 
 .header-contact {
@@ -276,13 +287,17 @@ img {
   | Hero
   |============================
 */
-.hero {
-  background-color: #191c26;
 
-  /* background-image: url(../images/icons/logo.svg);
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: top right; */
+.hero-container {
+  position: relative;
+  display: flex;
+}
+
+.hero-left-side {
+  width: 100px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
 }
 
 .media-link {
@@ -299,7 +314,41 @@ img {
   color: var(--accent-txt-cl);
 }
 
+.hero-right-side {
+  background-color: #191c26;
+  flex-grow: 1;
+  padding-top: 272px;
+  padding-bottom: 208px;
+  padding-left: 100px;
+
+  background-image: url(../images/hero/slider-img.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.hero-undertitle {
+  width: 358px;
+  margin-bottom: 0;
+}
+
+.slider-list {
+  position: absolute;
+  right: 35px;
+  bottom: 40px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 24px;
+}
+
 .slider-btn {
+  min-width: 60px;
+
+  padding: 0;
+  padding-bottom: 8px;
+
   font-weight: 600;
   font-size: 11px;
   line-height: calc(15 / 11);
@@ -308,8 +357,43 @@ img {
   color: var(--light-txt-cl);
 
   background-color: transparent;
-
+  border: none;
+  border-bottom: 1px solid var(--light-cl);
   cursor: pointer;
+}
+
+.slider-btn.disabled {
+  color: var(--grey-cl-60);
+  border-bottom-color: var(--grey-cl-60);
+}
+
+.slider-item:first-child .slider-btn {
+  text-align: left;
+}
+.slider-item:last-child .slider-btn {
+  text-align: right;
+}
+
+.slider-pagination {
+  position: absolute;
+  top: calc(50% - 15px);
+  right: 35px;
+}
+
+.slider-pagination-item {
+  width: 8px;
+  height: 2px;
+  margin-left: auto;
+  background-color: var(--grey-cl);
+}
+
+.slider-pagination-item:not(:last-child) {
+  margin-bottom: 12px;
+}
+
+.slider-pagination-item.active {
+  width: 18px;
+  background-color: var(--light-cl);
 }
 
 /**
@@ -467,24 +551,6 @@ img {
   background-color: #f7f7f7;
 }
 
-/* .team-list {
-  --items: 3;
-} */
-
-/* .team-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--indent);
-}
-
-.team-item {
-  flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
-} */
-/*
-.team-item {
-  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4), 6px 6px 10px rgba(0, 0, 0, 0.2);
-} */
-
 .team-wrap {
   padding-top: 30px;
   padding-left: 10px;
@@ -531,7 +597,6 @@ img {
   border-radius: 50%;
 }
 
-/* варіант для лінивих */
 .socials-link:hover,
 .socials-link:focus {
   color: var(--accent-bg-cl);
@@ -541,16 +606,6 @@ img {
 .socials-icon {
   fill: currentColor;
 }
-
-/* розширений варіант зміни кольору іконки */
-/*
-.socials-icon {
-  fill: var(--main-txt-cl);
-}
-.socials-link:hover .socials-icon,
-.socials-link:focus .socials-icon {
-  fill: var(--accent-bg-cl);
-} */
 
 /**
   |============================
@@ -653,25 +708,68 @@ img {
   color: var(--grey-cl);
 }
 
-/* .svg-element {
-  animation: rotation linear 2s infinite;
+/**
+  |============================
+  | Modal window
+  |============================
+*/
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+
+  /* лінивий спосіб центрування */
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+
+  /* transition: visibility 1000ms, opacity 1000ms; */
 }
 
-@keyframes rotation {
-  from {
-    transform: rotate(0);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
-} */
-
-/* .antena {
-  --color1: red;
-  --color2: teal;
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
 }
-.antena:hover {
-  --color1: lightblue;
-  --color2: hotpink;
-} */
+
+.modal {
+  /* start
+    центрування абсолютно позиційованих елементів
+  */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* end */
+
+  width: 500px;
+  height: 400px;
+  background-color: var(--light-cl);
+
+  border-radius: 16px;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.modal-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+
+  width: 35px;
+  height: 35px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+  border: 1px solid var(--accent-bg-cl);
+  border-radius: 50%;
+
+  cursor: pointer;
+}
