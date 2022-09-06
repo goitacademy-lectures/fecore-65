@@ -218,10 +218,11 @@ img {
   width: 100%;
 
   z-index: 100;
+}
 
-  /* background-color: var(--dark-bg-cl); */
-
-  /* outline: 1px solid #ff6c00; */
+.header.no-transparency {
+  backdrop-filter: blur(4px);
+  background-color: var(--grey-cl-60);
 }
 
 .header-container {
@@ -612,9 +613,14 @@ img {
   | Gallery
   |============================
 */
+.gallery-uppertitle {
+  margin-bottom: 44px;
+}
+
 .gallery-list {
   --items: 4;
 }
+
 /**
   |============================
   | Booking

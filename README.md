@@ -1,6 +1,6 @@
 # fe-core-65
 
-Заняття 8:
+Заняття 9:
 
 - Властивість position: static
 - Відносне позиціонування (position: relative)
