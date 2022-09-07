@@ -103,8 +103,7 @@ dist
 # TernJS port file
 .tern-port
 
-# OS generated files #
-######################
+# OS generated files
 .DS_Store
 .DS_Store?
 ._*
