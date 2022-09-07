@@ -30,6 +30,13 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <!-- Animate css -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <!-- AOS animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <!-- Custom styles -->
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
@@ -60,7 +67,13 @@
         </nav>
         <div class="header-group">
           <a class="header-contact link" href="tel:+380441111111">+38 044 111 11 11</a>
-          <button class="btn btn-theme-dark" type="button" data-modal-open>Online-booking</button>
+          <button
+            class="btn btn-theme-dark animate__animated animate__rubberBand animate__delay-2s"
+            type="button"
+            data-modal-open
+          >
+            Online-booking
+          </button>
         </div>
       </div>
     </header>
@@ -70,7 +83,7 @@
       <section class="hero">
         <div class="container hero-container">
           <div class="hero-left-side">
-            <ul class="media-list list">
+            <ul class="hero-media-list media-list list">
               <li class="media-item">
                 <a class="media-link link" href="">Instagram</a>
               </li>
@@ -83,8 +96,8 @@
           <div class="hero-right-side">
             <p class="uppertitle uppertitle-theme-dark">A hair salon for men in Kyiv</p>
             <h1 class="main-title">BarberShop</h1>
-            <p class="hero-undertitle undertitle undertitle-theme-dark"
-              >We are experts in trendy men’s haircuts. We work quickly, carefully and with style.
+            <p class="hero-undertitle undertitle undertitle-theme-dark">
+              We are experts in trendy men’s haircuts. We work quickly, carefully and with style.
             </p>
           </div>
 
@@ -129,8 +142,8 @@
           <div class="about-right-side">
             <p class="uppertitle">About</p>
             <h2 class="title">Best Barbershop in your city</h2>
-            <p class="undertitle"
-              >If you want to add more confidence to your image, you should definitely visit us.
+            <p class="undertitle">
+              If you want to add more confidence to your image, you should definitely visit us.
             </p>
             <p class="about-desc">
               We are a team that never stops at what has been achieved and are thirsty for changes.
@@ -185,7 +198,7 @@
         </div>
       </section>
       <!-- Benefits section -->
-      <section class="benefits section">
+      <section class="benefits section" data-aos="fade-up" data-aos-duration="2000">
         <div class="container benefits-container">
           <div class="benefits-left-side">
             <ul class="benefits-list list">
@@ -224,7 +237,16 @@
           <h2 class="title">Our barbers</h2>
           <ul class="team-list list card-set">
             <li class="team-item card-set-item">
-              <img src="./images/team/img-1.jpg" alt="John Smith" width="370" height="346" />
+              <div class="team-thumb">
+                <img src="./images/team/img-1.jpg" alt="John Smith" width="370" height="346" />
+                <div class="overlay">
+                  <p class="overlay-desc">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum consectetur, rem
+                    veniam iste et tenetur voluptatum fugit iure error eligendi tempore? Nobis
+                    voluptate quas nemo dolorem officia, vel laboriosam tempora.
+                  </p>
+                </div>
+              </div>
               <div class="team-wrap">
                 <h3 class="team-name">John Smith</h3>
                 <p class="team-position">Extreme Barber</p>
@@ -285,7 +307,16 @@
               </div>
             </li>
             <li class="team-item card-set-item">
-              <img src="./images/team/img-2.jpg" alt="Michele Doe" width="370" height="346" />
+              <div class="team-thumb">
+                <img src="./images/team/img-2.jpg" alt="Michele Doe" width="370" height="346" />
+                <div class="overlay">
+                  <p class="overlay-desc">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum consectetur, rem
+                    veniam iste et tenetur voluptatum fugit iure error eligendi tempore? Nobis
+                    voluptate quas nemo dolorem officia, vel laboriosam tempora.
+                  </p>
+                </div>
+              </div>
               <div class="team-wrap">
                 <h3 class="team-name">Michele Doe</h3>
                 <p class="team-position">Extreme Barber</p>
@@ -346,7 +377,16 @@
               </div>
             </li>
             <li class="team-item card-set-item">
-              <img src="./images/team/img-3.jpg" alt="Alan Black" width="370" height="346" />
+              <div class="team-thumb">
+                <img src="./images/team/img-3.jpg" alt="Alan Black" width="370" height="346" />
+                <div class="overlay">
+                  <p class="overlay-desc">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum consectetur, rem
+                    veniam iste et tenetur voluptatum fugit iure error eligendi tempore? Nobis
+                    voluptate quas nemo dolorem officia, vel laboriosam tempora.
+                  </p>
+                </div>
+              </div>
               <div class="team-wrap">
                 <h3 class="team-name">Alan Black</h3>
                 <p class="team-position">Extreme Barber</p>
@@ -415,7 +455,7 @@
           <p class="gallery-uppertitle uppertitle">in Latin, "barba" means "beard"</p>
           <h2 hidden>Our gallery</h2>
           <ul class="gallery-list list card-set">
-            <li class="gallery-item card-set-item">
+            <li class="gallery-item card-set-item" data-aos="fade-right" data-aos-duration="1000">
               <img
                 class="gallery-img"
                 src="./images/gallery/gallery-img-1.jpg"
@@ -424,7 +464,12 @@
                 height="360"
               />
             </li>
-            <li class="gallery-item card-set-item">
+            <li
+              class="gallery-item card-set-item"
+              data-aos="fade-right"
+              data-aos-duration="1000"
+              data-aos-delay="500"
+            >
               <img
                 class="gallery-img"
                 src="./images/gallery/gallery-img-2.jpg"
@@ -433,7 +478,12 @@
                 height="360"
               />
             </li>
-            <li class="gallery-item card-set-item">
+            <li
+              class="gallery-item card-set-item"
+              data-aos="fade-right"
+              data-aos-duration="1000"
+              data-aos-delay="1000"
+            >
               <img
                 class="gallery-img"
                 src="./images/gallery/gallery-img-3.jpg"
@@ -442,7 +492,12 @@
                 height="360"
               />
             </li>
-            <li class="gallery-item card-set-item">
+            <li
+              class="gallery-item card-set-item"
+              data-aos="fade-right"
+              data-aos-duration="1000"
+              data-aos-delay="1500"
+            >
               <img
                 class="gallery-img"
                 src="./images/gallery/gallery-img-4.jpg"
@@ -497,12 +552,6 @@
               </ul>
             </address>
             <div>
-              <!-- <svg class="antena" width="70" height="70">
-                <use href="./images/icons/symbol-defs.svg#antenna"></use>
-              </svg>
-              <svg width="106" height="60">
-                <use href="./images/sprite.svg#logo-1"></use>
-              </svg> -->
               <p class="contacts-uppertitle uppertitle uppertitle-theme-dark">working hours</p>
               <p class="contacts-schedule">
                 Every day from <time datetime="09:00">9:00</time> to
@@ -532,15 +581,16 @@
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button class="modal-btn" type="button" data-modal-close>
-          X
-          <!-- <svg width="20" height="20">
-            <use href=""></use>
-          </svg> -->
+          <svg width="20" height="20">
+            <use href="./images/sprite.svg#cross"></use>
+          </svg>
         </button>
       </div>
     </div>
 
     <script src="./js/modal.js"></script>
     <script src="./js/header-scroll.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./js/aos-animate.js"></script>
   </body>
 </html>
