@@ -581,22 +581,45 @@ img {
   align-items: flex-start;
 
   width: 370px;
+  margin: 0 auto;
 }
+.benefits-item {
+  width: 170px;
+  min-height: 133px;
+  padding: 20px 24px;
+
+  text-align: center;
+  background-color: #f7f7f7;
+}
+
+.benefits-item:nth-child(even) {
+  margin-top: 30px;
+  margin-left: 30px;
+}
+
 .benefits-quantity {
+  position: relative;
+
+  display: inline-block;
   font-weight: 700;
   font-size: 42px;
   line-height: calc(57 / 42);
-  text-align: center;
   letter-spacing: 0.05em;
 
   color: #303030;
 }
 
-.benefits-decor {
+.benefits-quantity:after {
+  content: '\002B';
+
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translateX(15px) translateY(7px);
+
   font-weight: 600;
   font-size: 16px;
   line-height: calc(22 / 16);
-  text-align: center;
   color: #ff6c00;
 }
 
