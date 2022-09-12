@@ -875,6 +875,7 @@ img {
   /* start
     центрування абсолютно позиційованих елементів
   */
+  padding: 20px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -882,7 +883,7 @@ img {
   /* end */
 
   width: 500px;
-  height: 400px;
+  min-height: 400px;
   background-color: var(--light-cl);
 
   border-radius: 16px;
@@ -906,4 +907,22 @@ img {
   border-radius: 50%;
 
   cursor: pointer;
+}
+
+label {
+  display: block;
+}
+/*
+input[name='user-name']::placeholder {
+  color: tomato;
+}
+input[name='user-mail']::placeholder {
+  color: teal;
+}
+input[name='user-phone']::placeholder {
+  color: blue;
+} */
+
+textarea {
+  resize: none;
 }
