@@ -151,7 +151,7 @@
               are a team that is always "on the same wave" with clients. Therefore, we are always
               ready to improve everyone who comes to us!
             </p>
-            <button class="btn" type="button">online-booking</button>
+            <button class="btn" type="button" data-modal-open>online-booking</button>
           </div>
         </div>
       </section>
@@ -581,52 +581,98 @@
     </footer>
 
     <!-- Modal window -->
-    <div class="backdrop" data-modal>
+    <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button class="modal-btn" type="button" data-modal-close>
-          <svg width="20" height="20">
-            <use href="./images/sprite.svg#cross"></use>
+          <svg width="16" height="16">
+            <use href="./images/sprite.svg#icon-close"></use>
           </svg>
         </button>
         <form class="register-form" name="register-form">
-          <strong class="register-form-title">Залиште свої дані, ми вам передзвонимо</strong>
+          <strong class="register-form-title">Leave your details, we will call you back</strong>
 
           <div class="register-form-group" role="group">
-            <label class="label">
-              <span>Ім'я</span>
-              <input type="text" name="" />
-              <svg width="18" height="18">
-                <use href=""></use>
+            <label class="register-form-field">
+              <input
+                class="register-form-input"
+                type="text"
+                name=""
+                required
+                minlength="3"
+                placeholder="&nbsp;"
+              />
+              <span class="register-form-label">Name</span>
+              <svg class="register-form-icon" width="22" height="22">
+                <use href="./images/sprite.svg#profile"></use>
+              </svg>
+              <svg class="register-form-notification" width="22" height="22">
+                <use class="warning" href="./images/sprite.svg#icon-warning"></use>
+                <use class="success" href="./images/sprite.svg#icon-success"></use>
               </svg>
             </label>
 
-            <label class="label">
-              <span>Телефон</span>
-              <input type="text" name="" />
-              <svg width="18" height="18">
-                <use href=""></use>
+            <label class="register-form-field">
+              <input
+                class="register-form-input"
+                type="text"
+                name=""
+                required
+                minlength="12"
+                maxlength="12"
+                placeholder="+38 099 999 99 99"
+              />
+              <span class="register-form-label">Phone</span>
+              <svg class="register-form-icon" width="22" height="22">
+                <use href="./images/sprite.svg#phone"></use>
+              </svg>
+              <svg class="register-form-notification" width="22" height="22">
+                <use class="warning" href="./images/sprite.svg#icon-warning"></use>
+                <use class="success" href="./images/sprite.svg#icon-success"></use>
               </svg>
             </label>
 
-            <label class="label">
-              <span>Пошта</span>
-              <input type="email" name="" />
-              <svg width="18" height="18">
-                <use href=""></use>
+            <label class="register-form-field">
+              <input
+                class="register-form-input"
+                type="email"
+                name=""
+                required
+                placeholder="example@mail.com"
+              />
+              <span class="register-form-label">E-mail</span>
+              <svg class="register-form-icon" width="22" height="22">
+                <use href="./images/sprite.svg#envelope"></use>
+              </svg>
+              <svg class="register-form-notification" width="22" height="22">
+                <use class="warning" href="./images/sprite.svg#icon-warning"></use>
+                <use class="success" href="./images/sprite.svg#icon-success"></use>
               </svg>
             </label>
 
-            <label class="label">
-              <textarea name="" rows="5" placeholder="Введіть текст"></textarea>
+            <label class="register-form-field">
+              <span class="register-form-heading">Message</span>
+              <textarea
+                class="register-form-message"
+                name=""
+                rows="5"
+                placeholder="Enter the text"
+              ></textarea>
             </label>
           </div>
 
-          <label>
-            <input type="checkbox" name="" id="" />
-            <span>Погоджуюся з розсилкою та приймаю <a href="">Умови договору</a></span>
+          <label class="register-form-agreement">
+            <input class="register-form-checkbox visually-hidden" type="checkbox" name="" id="" />
+            <svg class="register-form-icons" width="20" height="20">
+              <use class="icon-checked" href="./images/sprite.svg#checked"></use>
+              <use class="icon-unchecked" href="./images/sprite.svg#unchecked"></use>
+            </svg>
+            <span class="register-form-desc">
+              I agree with the mailing and accept
+              <a class="register-form-link" href="" target="_blank">the Terms of the Agreement</a>
+            </span>
           </label>
 
-          <button type="submit">Відправити</button>
+          <button class="register-form-btn btn" type="submit">Відправити</button>
         </form>
       </div>
     </div>
