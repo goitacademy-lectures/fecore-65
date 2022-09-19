@@ -1073,7 +1073,15 @@ img {
   opacity: 0;
 }
 
-.register-form-checkbox:focus + .register-form-icons {
+/* Перевірка стану чекбокса перед встановленням стану фокусу сусідньому елементу */
+.register-form-checkbox:focus-visible:not(:checked) + .register-form-icons,
+.register-form-checkbox:focus-visible:checked + .register-form-icons,
+.register-form-checkbox:disabled + .register-form-icons {
+  outline: transparent;
+}
+
+/* Встановлення стану фокусу сусідньому елементу іконці */
+.register-form-checkbox:focus:focus-visible + .register-form-icons {
   outline: 2px solid rgb(56, 87, 107);
   outline-offset: 1px;
   border-radius: 2px;
