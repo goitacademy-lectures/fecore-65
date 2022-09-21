@@ -1,0 +1,33 @@
+.btn {
+  width: 160px;
+  min-height: 40px;
+  padding: 10px 16px;
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: calc(16 / 12);
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--main-txt-cl);
+
+  background-color: transparent;
+  border: 1px solid var(--accent-bg-cl);
+  border-radius: var(--btn-radius);
+  cursor: pointer;
+
+  transition: background-color var(--anim-slow), color var(--anim-slow);
+
+  &:hover,
+  &:focus {
+    background-color: var(--accent-bg-cl);
+  }
+
+  &--theme-dark {
+    color: var(--light-txt-cl);
+  }
+
+  &--theme-dark:hover,
+  &--theme-dark:focus {
+    background-color: var(--accent-bg-cl);
+  }
+}
