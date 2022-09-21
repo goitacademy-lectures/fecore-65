@@ -1,0 +1,11 @@
+.gallery {
+  @include section;
+}
+
+.gallery-uppertitle {
+  margin-bottom: 44px;
+}
+
+.gallery-list {
+  --items: 4;
+}

@@ -1,0 +1,29 @@
+.about {
+  @include section(120px);
+}
+
+.about-container {
+  display: flex;
+  gap: 30px;
+}
+
+.about-list {
+  display: flex;
+  gap: 30px;
+}
+
+.about-right-side {
+  width: 470px;
+}
+
+.about-desc {
+  margin-bottom: 42px;
+
+  // font-size: 14px;
+  // line-height: calc(26 / 14);
+  // letter-spacing: 0.02em;
+
+  @include fonts(null, 14px, 26px);
+
+  color: var(--dark-txt-cl);
+}

@@ -1,0 +1,22 @@
+.footer {
+  @include section(56px);
+
+  // padding-top: 56px;
+  // padding-bottom: 56px;
+}
+
+.footer-container {
+  display: flex;
+  align-items: center;
+}
+
+.footer-copyright {
+  margin-right: auto;
+
+  font-weight: 600;
+  font-size: 11px;
+  line-height: calc(15 / 11);
+  letter-spacing: 0.2em;
+
+  color: var(--grey-cl);
+}
