@@ -191,9 +191,14 @@ body {
 .title {
   margin-bottom: 20px;
   font-family: var(--secondary-font);
-  font-size: 42px;
+  font-size: 40px;
   line-height: 1.1666666667;
   letter-spacing: 0.05em;
+}
+@media screen and (min-width: 1200px) {
+  .title {
+    font-size: 42px;
+  }
 }
 
 .title--theme-dark {
@@ -211,11 +216,23 @@ body {
 }
 
 .container {
-  width: 1200px;
+  max-width: 448px;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
+  outline: 2px solid red;
+  outline-offset: -2px;
+}
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
 }
 
 .card-set {
@@ -400,6 +417,7 @@ body {
 }
 
 .price {
+  padding: 84px 0;
   max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
@@ -409,50 +427,88 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
+@media screen and (min-width: 768px) {
+  .price {
+    padding: 100px 0;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .price {
+    padding: 120px 0;
+  }
+}
 
 .price-block {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   margin-bottom: 44px;
-  -webkit-perspective: 1000px;
-          perspective: 1000px;
+}
+@media screen and (max-width: 767px) {
+  .price-block {
+    padding: 30px 40px;
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .price-block {
+    padding: 32px 40px;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#171a24), to(rgba(23, 26, 36, 0.2)));
+    background-image: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .price-block {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-perspective: 1000px;
+            perspective: 1000px;
+  }
 }
 
-.price-list {
-  -ms-flex-preferred-size: 570px;
-      flex-basis: 570px;
-  padding: 30px 20px;
-  -webkit-transition: -webkit-transform var(--anim-fast);
-  transition: -webkit-transform var(--anim-fast);
-  transition: transform var(--anim-fast);
-  transition: transform var(--anim-fast), -webkit-transform var(--anim-fast);
+@media screen and (max-width: 1199px) {
+  .price-list {
+    margin-bottom: 20px;
+  }
 }
-
-.price-list:first-child {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#171a24), to(rgba(23, 26, 36, 0.2)));
-  background-image: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
-  -webkit-transform: rotateY(15deg);
-          transform: rotateY(15deg);
-  -webkit-transform-origin: left center;
-          transform-origin: left center;
+@media screen and (min-width: 1200px) {
+  .price-list {
+    -ms-flex-preferred-size: 570px;
+        flex-basis: 570px;
+    padding: 30px 20px;
+    -webkit-transition: -webkit-transform var(--anim-fast);
+    transition: -webkit-transform var(--anim-fast);
+    transition: transform var(--anim-fast);
+    transition: transform var(--anim-fast), -webkit-transform var(--anim-fast);
+  }
 }
-
-.price-list:last-child {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#090b13), to(rgba(9, 11, 19, 0.2)));
-  background-image: linear-gradient(180deg, #090b13 0%, rgba(9, 11, 19, 0.2) 100%);
-  -webkit-transform: rotateY(-15deg);
-          transform: rotateY(-15deg);
-  -webkit-transform-origin: right center;
-          transform-origin: right center;
-}
-
 .price-list:hover {
   -webkit-transform: rotateY(0);
           transform: rotateY(0);
+}
+@media screen and (min-width: 1200px) {
+  .price-list:first-child {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#171a24), to(rgba(23, 26, 36, 0.2)));
+    background-image: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
+    -webkit-transform: rotateY(15deg);
+            transform: rotateY(15deg);
+    -webkit-transform-origin: left center;
+            transform-origin: left center;
+  }
+}
+.price-list:last-child {
+  margin-bottom: 0;
+}
+@media screen and (min-width: 1200px) {
+  .price-list:last-child {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#090b13), to(rgba(9, 11, 19, 0.2)));
+    background-image: linear-gradient(180deg, #090b13 0%, rgba(9, 11, 19, 0.2) 100%);
+    -webkit-transform: rotateY(-15deg);
+            transform: rotateY(-15deg);
+    -webkit-transform-origin: right center;
+            transform-origin: right center;
+  }
 }
 
 .price-item {
@@ -463,10 +519,23 @@ body {
       -ms-flex-align: baseline;
           align-items: baseline;
   gap: 12px;
-  margin-bottom: 20px;
   color: var(--grey-cl);
 }
-
+@media screen and (max-width: 1199px) {
+  .price-item:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .price-item {
+    margin-bottom: 20px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .price-item:last-child {
+    margin-bottom: 0;
+  }
+}
 .price-item::before {
   content: "";
   display: block;
@@ -475,10 +544,6 @@ body {
       -ms-flex-positive: 1;
           flex-grow: 1;
   background-color: rgba(157, 164, 189, 0.12);
-}
-
-.price-item:last-child {
-  margin-bottom: 0;
 }
 
 .price-item-serv {
@@ -640,8 +705,8 @@ body {
 }
 
 .gallery {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding-top: 84px;
+  padding-bottom: 84px;
 }
 
 .gallery-uppertitle {
@@ -664,8 +729,8 @@ body {
 
 .booking,
 .contacts {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding-top: 84px;
+  padding-bottom: 84px;
   -ms-flex-preferred-size: 50%;
       flex-basis: 50%;
 }
