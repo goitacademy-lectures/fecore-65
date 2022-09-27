@@ -3,6 +3,12 @@
   background-color: #f7f7f7;
 }
 
+.team-container {
+  @media screen and (max-width: 1199px) {
+    max-width: 450px;
+  }
+}
+
 .team-thumb {
   position: relative;
   overflow: hidden;

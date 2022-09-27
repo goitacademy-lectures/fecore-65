@@ -1,29 +1,38 @@
 .about {
-  @include section(120px);
+  @extend %section;
 }
 
 .about-container {
   display: flex;
   gap: 30px;
+
+  @media screen and (min-width: 1200px) {
+    gap: 64px;
+  }
 }
 
 .about-list {
-  display: flex;
-  gap: 30px;
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    min-width: 330px;
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
 }
 
 .about-right-side {
-  width: 470px;
+  @media screen and (min-width: 480px) {
+    min-width: 330px;
+    max-width: 470px;
+  }
 }
 
 .about-desc {
   margin-bottom: 42px;
 
-  // font-size: 14px;
-  // line-height: calc(26 / 14);
-  // letter-spacing: 0.02em;
-
   @include fonts(null, 14px, 26px);
-
   color: var(--dark-txt-cl);
 }

@@ -1,5 +1,5 @@
 .gallery {
-  @include section;
+  @extend %section;
 }
 
 .gallery-uppertitle {
@@ -7,5 +7,13 @@
 }
 
 .gallery-list {
-  --items: 4;
+  --items: 1;
+
+  @media screen and (min-width: 768px) {
+    --items: 2;
+  }
+
+  @media screen and (min-width: 1200px) {
+    --items: 4;
+  }
 }

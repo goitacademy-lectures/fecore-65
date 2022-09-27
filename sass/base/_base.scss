@@ -1,21 +1,24 @@
 body {
   font-family: var(--main-font);
   color: var(--main-txt-cl);
-  font-size: 18px;
+  font-size: 16px;
   line-height: calc(30 / 18);
   letter-spacing: 0.02em;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 18px;
+  }
 }
 
-// .section {
-//   padding-top: 120px;
-//   padding-bottom: 120px;
-// }
+.page {
+  overflow-x: hidden;
+}
 
 .main-title {
   margin-bottom: 20px;
   width: 450px;
   font-family: var(--secondary-font);
-  font-size: 72px;
+  font-size: 48px;
   line-height: calc(85 / 72);
   letter-spacing: 0.05em;
   color: transparent;
@@ -24,6 +27,10 @@ body {
   background-clip: text;
 
   animation: slide-right 2000ms ease-in 200ms both;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 72px;
+  }
 }
 
 @keyframes slide-right {
@@ -67,49 +74,49 @@ body {
   line-height: calc(15 / 11);
   letter-spacing: 0.1em;
   text-transform: uppercase;
-}
 
-.uppertitle::before {
-  content: '';
-  display: block;
+  &::before {
+    content: '';
+    display: block;
 
-  width: 60px;
-  height: 1px;
+    width: 60px;
+    height: 1px;
 
-  background-color: var(--main-txt-cl);
-}
+    background-color: var(--main-txt-cl);
+  }
 
-.uppertitle--theme-dark {
-  color: var(--grey-cl-60);
-}
+  &--theme-dark {
+    color: var(--grey-cl-60);
 
-.uppertitle--theme-dark::before {
-  background-color: var(--grey-cl-60);
+    &::before {
+      background-color: var(--grey-cl-60);
+    }
+  }
 }
 
 .title {
   margin-bottom: 20px;
 
   font-family: var(--secondary-font);
-  font-size: 40px;
+  font-size: 28px;
   line-height: calc(49 / 42);
   letter-spacing: 0.05em;
 
   @media screen and (min-width: 1200px) {
     font-size: 42px;
   }
-}
 
-.title--theme-dark {
-  margin-bottom: 44px;
-  color: var(--light-txt-cl);
+  &--theme-dark {
+    margin-bottom: 44px;
+    color: var(--light-txt-cl);
+  }
 }
 
 .undertitle {
   margin-bottom: 20px;
   color: var(--dark-txt-cl);
-}
 
-.undertitle--theme-dark {
-  color: var(--grey-cl);
+  &--theme-dark {
+    color: var(--grey-cl);
+  }
 }

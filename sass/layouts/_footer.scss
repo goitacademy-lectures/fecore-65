@@ -1,13 +1,29 @@
 .footer {
-  @include section(56px);
+  padding-top: 44px;
+  padding-bottom: 44px;
 
-  // padding-top: 56px;
-  // padding-bottom: 56px;
+  @media screen and (min-width: 1200px) {
+    @include section(56px);
+  }
 }
 
 .footer-container {
   display: flex;
-  align-items: center;
+
+  @media screen and (max-width: 767px) {
+    flex-direction: column-reverse;
+  }
+
+  @media screen and (min-width: 768px) {
+    align-items: center;
+  }
+}
+
+.footer-media-list {
+  @media screen and (max-width: 767px) {
+    margin-left: auto;
+    margin-bottom: 20px;
+  }
 }
 
 .footer-copyright {

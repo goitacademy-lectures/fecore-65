@@ -1,7 +1,6 @@
 .price {
   @extend %section;
 
-  padding: 84px 0;
   max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
@@ -12,16 +11,6 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-
-  @media screen and (min-width: 768px) {
-    // @include section(100px);
-    padding: 100px 0;
-  }
-
-  @media screen and (min-width: 1200px) {
-    // @include section(120px);
-    padding: 120px 0;
-  }
 }
 
 .price-block {
