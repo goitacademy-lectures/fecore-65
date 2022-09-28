@@ -7,10 +7,32 @@
 
   background-color: var(--dark-bg-cl);
 
-  background-image: url(../images/price/price-bg.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-image: url(../images/price/img_sm-@1x.png);
+
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    background-image: url(../images/price/img_sm-@2x.png);
+  }
+
+  // Tablet images
+  @media screen and (min-width: 481px) {
+    background-image: url(../images/price/img_md-@1x.png);
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url(../images/price/img_md-@2x.png);
+    }
+  }
+
+  // Desktop images
+  @media screen and (min-width: 769px) {
+    background-image: url(../images/price/img_lg-@1x.png);
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url(../images/price/img_lg-@2x.png);
+    }
+  }
 }
 
 .price-block {

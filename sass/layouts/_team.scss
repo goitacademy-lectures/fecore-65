@@ -9,6 +9,17 @@
   }
 }
 
+.team-list {
+  --items: 1;
+
+  @media screen and (min-width: 768px) {
+    --items: 1;
+  }
+  @media screen and (min-width: 1200px) {
+    --items: 3;
+  }
+}
+
 .team-thumb {
   position: relative;
   overflow: hidden;

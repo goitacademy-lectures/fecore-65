@@ -76,6 +76,17 @@
               Online-booking
             </button>
           </div>
+
+          <button
+            class="menu-btn js-open-menu"
+            type="button"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+          >
+            <svg width="40" height="40">
+              <use href="./images/sprite.svg#menu-open"></use>
+            </svg>
+          </button>
         </div>
       </header>
       <!-- Main section -->
@@ -120,22 +131,72 @@
           <div class="container about-container">
             <ul class="about-list list">
               <li class="about-item">
-                <img
-                  class="about-img"
-                  src="./images/about/img-1.jpg"
-                  alt="Beard shaving"
-                  width="270"
-                  height="445"
-                />
+                <picture>
+                  <!-- Desktop -->
+                  <source
+                    media="(min-width: 1200px)"
+                    srcset="
+                      ./images/about/img-1_lg-@1x.webp 1x,
+                      ./images/about/img-1_lg-@2x.webp 2x
+                    "
+                    type="image/webp"
+                  />
+                  <source
+                    media="(min-width: 1200px)"
+                    srcset="./images/about/img-1_lg-@1x.jpg 1x, ./images/about/img-1_lg-@2x.jpg 2x"
+                    type="image/jpg"
+                  />
+                  <!-- Tablet -->
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="
+                      ./images/about/img-1_md-@1x.webp 1x,
+                      ./images/about/img-1_md-@2x.webp 2x
+                    "
+                    type="image/webp"
+                  />
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="./images/about/img-1_md-@1x.jpg 1x, ./images/about/img-1_md-@2x.jpg 2x"
+                    type="image/jpg"
+                  />
+                  <img
+                    class="about-img"
+                    src="./images/about/img-1_md-@1x.jpg"
+                    alt="Beard shaving"
+                  />
+                </picture>
               </li>
               <li class="about-item">
-                <img
-                  class="about-img"
-                  src="./images/about/img-2.jpg"
-                  alt="Haircut"
-                  width="270"
-                  height="445"
-                />
+                <picture>
+                  <source
+                    media="(min-width: 1200px)"
+                    srcset="
+                      ./images/about/img-2_lg-@1x.webp 1x,
+                      ./images/about/img-2_lg-@2x.webp 2x
+                    "
+                    type="image/webp"
+                  />
+                  <source
+                    media="(min-width: 1200px)"
+                    srcset="./images/about/img-2_lg-@1x.jpg 1x, ./images/about/img-2_lg-@2x.jpg 2x"
+                    type="image/jpg"
+                  />
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="
+                      ./images/about/img-2_md-@1x.webp 1x,
+                      ./images/about/img-2_md-@2x.webp 2x
+                    "
+                    type="image/webp"
+                  />
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="./images/about/img-2_md-@1x.jpg 1x, ./images/about/img-2_md-@2x.jpg 2x"
+                    type="image/jpg"
+                  />
+                  <img class="about-img" src="./images/about/img-2_md-@1x.jpg" alt="Haircut" />
+                </picture>
               </li>
             </ul>
             <div class="about-right-side">
@@ -240,7 +301,23 @@
             <ul class="team-list list card-set">
               <li class="team-item card-set-item">
                 <div class="team-thumb">
-                  <img src="./images/team/img-1.jpg" alt="John Smith" width="370" height="346" />
+                  <!-- <img
+                    srcset="./images/team/img1_sm-@1x.jpg 1x, ./images/team/img1_sm-@2x.jpg 2x"
+                    src="./images/team/img-1.jpg"
+                    alt="John Smith"
+                  /> -->
+                  <img
+                    srcset="
+                      ./images/team/w/img1-370.jpg 370w,
+                      ./images/team/w/img1-418.jpg 418w,
+                      ./images/team/w/img1-450.jpg 450w,
+                      ./images/team/w/img1-836.jpg 836w,
+                      ./images/team/w/img1-900.jpg 900w
+                    "
+                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 450px, (min-width: 480px) 418px, 100vw"
+                    src="./images/team/w/img1-418.jpg"
+                    alt="John Smith"
+                  />
                   <div class="overlay">
                     <p class="overlay-desc">
                       Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum consectetur,
@@ -672,11 +749,59 @@
           </form>
         </div>
       </div>
+      <!-- Mobile menu -->
+      <div class="menu-container js-menu-container" id="mobile-menu">
+        <button class="menu-toggle js-close-menu">
+          <svg width="40" height="40">
+            <use href="./images/sprite.svg#menu-close"></use>
+          </svg>
+        </button>
+
+        <ul class="mobile-menu list">
+          <li>
+            <a href="" class="link">About</a>
+          </li>
+          <li>
+            <a href="" class="link">Products</a>
+          </li>
+          <li>
+            <a href="" class="link">Contacts</a>
+          </li>
+          <li>
+            <a href="" class="link">Career</a>
+          </li>
+        </ul>
+
+        <ul class="list">
+          <li>
+            <a href="" class="link">+38 096 111 11 11</a>
+          </li>
+          <li>
+            <a href="" class="link">info@devstudio.com</a>
+          </li>
+        </ul>
+
+        <ul class="mobile-socials list">
+          <li><a href="" class="link">Instagram </a></li>
+          <li><a href="" class="link">Twitter</a></li>
+          <li><a href="" class="link">Facebook</a></li>
+          <li><a href="" class="link">LinkedIn</a></li>
+        </ul>
+      </div>
     </div>
 
     <script src="./js/modal.js"></script>
     <script src="./js/header-scroll.js"></script>
+    <!-- animations -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="./js/aos-animate.js"></script>
+    <!-- mobile menu -->
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="./js/mobile-menu.js"></script>
   </body>
 </html>
