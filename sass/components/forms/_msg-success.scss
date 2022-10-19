@@ -1,0 +1,17 @@
+.success-icon {
+  opacity: 0;
+  fill: rgb(0, 164, 57);
+  transition: opacity var(--anim-fast);
+}
+
+.booking-form-input:not(:placeholder-shown):valid:required ~ .info-icons > .success-icon {
+  opacity: 1;
+}
+
+.order-form-input:not(:placeholder-shown):valid:required ~ .info-icons > .success-icon {
+  opacity: 1;
+}
+
+// [class*="-input"]:not(:placeholder-shown):valid:required .success-icon {
+//   opacity: 1;
+// }

@@ -1,9 +1,14 @@
+/**
+  |============================
+  | Card-set
+  |============================
+*/
 .card-set {
   display: flex;
   flex-wrap: wrap;
   gap: var(--indent);
 }
 
-.card-set-item {
+.card-set__item {
   flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
 }

@@ -7,5 +7,44 @@
 }
 
 .gallery-list {
-  --items: 4;
+  --items: 1;
+
+  @include mq(tab) {
+    --items: 2;
+  }
+
+  @include mq(desk) {
+    --items: 4;
+  }
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+}
+
+.gallery-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateX(100%);
+
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  backdrop-filter: blur(5px);
+  transition: transform var(--anim-slow);
+}
+
+.gallery-item:hover .gallery-wrap {
+  transform: translateX(0);
+}
+
+.gallery-desc {
+  text-align: center;
+  color: var(--light-txt-cl);
 }

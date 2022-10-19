@@ -1,0 +1,36 @@
+.booking-form-massage {
+  position: relative;
+  display: block;
+  margin-bottom: 44px;
+}
+
+.booking-form-textarea {
+  display: block;
+  width: 100%;
+  height: 76px;
+
+  font-size: 14px;
+  color: var(--light-txt-cl);
+
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid var(--grey-cl-40);
+  outline: transparent;
+
+  transition: border-color var(--anim-fast);
+  resize: none;
+}
+
+.booking-form-textarea:focus {
+  border-color: var(--border-light-cl);
+}
+
+.booking-form-massage .booking-form-label {
+  top: 0;
+}
+
+.booking-form-textarea:focus + .booking-form-label,
+.booking-form-textarea:not(:placeholder-shown) + .booking-form-label {
+  transform: translateY(-30px) scale(0.8);
+  color: var(--light-txt-cl);
+}

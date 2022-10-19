@@ -1,7 +1,8 @@
-.logo {
-  color: var(--main-txt-cl);
-}
+.logo__img {
+  display: block;
+  fill: var(--light-txt-cl);
 
-.logo__icon {
-  fill: currentColor;
+  @include mq(tab) {
+    fill: var(--main-txt-cl);
+  }
 }

@@ -1,0 +1,91 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @include fonts(16px, 26px);
+
+  font-family: var(--main-font);
+  color: var(--main-txt-cl);
+
+  @include mq(desk) {
+    font-size: 18px;
+  }
+}
+
+.section {
+  padding-top: 130px;
+  padding-bottom: 130px;
+}
+
+.main-title {
+  margin-bottom: 20px;
+
+  font-family: var(--secondary-font);
+  font-size: 48px;
+  line-height: calc(85 / 72);
+  letter-spacing: 0.05em;
+  color: var(--light-txt-cl);
+
+  @include mq(desk) {
+    font-size: 72px;
+  }
+}
+
+.uppertitle {
+  margin-bottom: 20px;
+
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  font-weight: 600;
+  font-size: 11px;
+  line-height: calc(15 / 11);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+
+  &--theme-dark {
+    color: var(--grey-cl-60);
+
+    ::before {
+      background-color: var(--grey-cl-60);
+    }
+  }
+
+  &::before {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 1px;
+
+    background-color: var(--main-txt-cl);
+  }
+}
+
+.title {
+  margin-bottom: 20px;
+
+  font-family: var(--secondary-font);
+  font-size: 40px;
+  line-height: calc(47 / 40);
+  letter-spacing: 0.05em;
+
+  @include mq(tab) {
+    font-size: 42px;
+  }
+
+  &--theme-dark {
+    margin-bottom: 44px;
+
+    color: var(--light-txt-cl);
+  }
+}
+
+.undertitle {
+  color: var(--dark-txt-cl);
+}
+
+.undertitle--theme-dark {
+  color: var(--grey-cl);
+}

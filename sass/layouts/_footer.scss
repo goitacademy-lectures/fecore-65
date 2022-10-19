@@ -1,13 +1,20 @@
 .footer {
-  @include section(56px);
-
-  // padding-top: 56px;
-  // padding-bottom: 56px;
+  @include mq(mob-only) {
+    padding-top: 44px;
+    padding-bottom: 44px;
+  }
 }
 
 .footer-container {
   display: flex;
-  align-items: center;
+
+  @include mq(mob-only) {
+    flex-direction: column-reverse;
+  }
+
+  @include mq(tab) {
+    align-items: center;
+  }
 }
 
 .footer-copyright {
@@ -19,4 +26,24 @@
   letter-spacing: 0.2em;
 
   color: var(--grey-cl);
+}
+
+.footer-media-list {
+  @include mq(mob-only) {
+    margin-left: auto;
+    margin-bottom: 20px;
+  }
+
+  &::before {
+    width: 60px;
+    height: 1px;
+  }
+}
+
+.footer-link {
+  @include mq(tab) {
+    display: inline-block;
+    padding-top: 56px;
+    padding-bottom: 56px;
+  }
 }

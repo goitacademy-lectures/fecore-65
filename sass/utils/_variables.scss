@@ -1,0 +1,33 @@
+:root {
+  /* Fonts */
+  --main-font: 'Open Sans', sans-serif;
+  --secondary-font: 'Raleway', sans-serif;
+
+  /* Text colors */
+  --main-txt-cl: #303030;
+  --accent-txt-cl: #ff6c00;
+  --light-txt-cl: #ffffff;
+  --dark-txt-cl: #555555;
+
+  --grey-cl: rgb(157, 164, 189);
+  --grey-cl-12: rgba(157, 164, 189, 0.12);
+  --grey-cl-40: rgba(157, 164, 189, 0.4);
+  --grey-cl-60: rgba(157, 164, 189, 0.6);
+
+  /* BG colors */
+  --dark-bg-cl: #191c26;
+  --dark-bg-cl-40: rgba(25, 28, 38, 0.4);
+  --dark-bg-cl-60: rgba(25, 28, 38, 0.6);
+  --accent-bg-cl: #ff6c00;
+  --light-bg-cl: #f7f7f7;
+
+  /* Others */
+  --border-light-cl: #ffffff;
+  --btn-radius: 25px;
+  --anim-fast: 400ms ease-in-out;
+  --anim-slow: 800ms ease-in-out;
+
+  /* Grid */
+  --indent: 30px;
+  --items: 3;
+}

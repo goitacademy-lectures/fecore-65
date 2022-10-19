@@ -1,13 +1,66 @@
 @import './decimals';
 
-@mixin section($padding: 84px) {
-  padding-top: $padding;
-  padding-bottom: $padding;
-}
-
-@mixin fonts($fw: 400, $fs: 14px, $lh: 24px, $ls: 0.02em) {
-  font-weight: $fw;
+@mixin fonts($fs, $lh, $fw: false, $ls: null) {
+  @if ($fw) {
+    font-weight: $fw;
+  }
   font-size: $fs;
   line-height: decimal-round($lh / $fs);
   letter-spacing: $ls;
+}
+
+@mixin mq($type) {
+  $mobile: 480px;
+  $tablet: 768px;
+  $desktop: 1200px;
+
+  @if $type == 'mob' {
+    @media screen and (min-width: $mobile) {
+      @content;
+    }
+  }
+  @if $type == 'mob-only' {
+    @media screen and (max-width: ($tablet - 0.02)) {
+      @content;
+    }
+  }
+  @if $type == 'tab' {
+    @media screen and (min-width: $tablet) {
+      @content;
+    }
+  }
+  @if $type == 'tab-only' {
+    @media screen and (min-width: $tablet) and (max-width: ($desktop - 0.02)) {
+      @content;
+    }
+  }
+  @if $type == 'desk' {
+    @media screen and (min-width: $desktop) {
+      @content;
+    }
+  }
+  @if $type == 'not-desk' {
+    @media screen and (max-width: ($desktop - 0.02)) {
+      @content;
+    }
+  }
+  @if $type == 'retina' {
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      @content;
+    }
+  }
+}
+
+@mixin section {
+  padding-top: 84px;
+  padding-bottom: 84px;
+
+  @include mq(tab) {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+  @include mq(desk) {
+    padding-top: 130px;
+    padding-bottom: 130px;
+  }
 }

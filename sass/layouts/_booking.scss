@@ -1,0 +1,42 @@
+.contatcs-group {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+
+  background-color: var(--dark-bg-cl);
+
+  background-repeat: no-repeat;
+  background-size: 100% 50%;
+  background-position: center bottom;
+
+  background-image: url(../images/contatcs/contacts-bg@1x_sm.png);
+
+  @include mq(retina) {
+    background-image: url(../images/contatcs/contacts-bg@2x_sm.png);
+  }
+
+  @include mq(tab) {
+    background-image: url(../images/contatcs/contacts-bg@1x_md.png);
+
+    @include mq(retina) {
+      background-image: url(../images/contatcs/contacts-bg@2x_md.png);
+    }
+  }
+
+  @include mq(desk) {
+    background-position: center right;
+    background-size: contain;
+    background-image: url(../images/contatcs/contacts-bg@1x_lg.png);
+
+    @include mq(retina) {
+      background-image: url(../images/contatcs/contacts-bg@2x_lg.png);
+    }
+  }
+}
+
+.contacts-container {
+  @include mq(desk) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
