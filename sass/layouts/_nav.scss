@@ -1,0 +1,38 @@
+.nav {
+  @include mq(mob-only) {
+    display: none;
+  }
+}
+
+.nav__list {
+  @extend %list;
+
+  display: flex;
+  align-items: center;
+
+  gap: 16px;
+
+  @include mq(desk) {
+    gap: 30px;
+  }
+}
+
+.nav__link {
+  display: block;
+  padding-top: 52px;
+  padding-bottom: 52px;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.1em;
+
+  color: var(--light-txt-cl);
+
+  transition: color var(--anim-fast);
+}
+
+.nav__link:hover,
+.nav__link:focus {
+  color: var(--accent-txt-cl);
+}
+/* Block navigation end*/

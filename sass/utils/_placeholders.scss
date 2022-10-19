@@ -1,11 +1,10 @@
-%section {
-  padding: 84px 0;
-
-  @media screen and (min-width: 768px) {
-    padding: 100px 0;
-  }
-
-  @media screen and (min-width: 1200px) {
-    padding: 120px 0;
-  }
+%list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
+
+// %section {
+//   padding-top: 84px;
+//   padding-bottom: 84px;
+// }

@@ -1,0 +1,44 @@
+.booking {
+  @include section;
+}
+
+.booking-form-group {
+  margin-bottom: 44px;
+
+  @include mq(tab) {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+}
+
+.booking-form-field {
+  position: relative;
+  display: block;
+
+  @include mq(tab-only) {
+    width: 50%;
+  }
+
+  &:first-child {
+    @include mq(mob-only) {
+      margin-bottom: 44px;
+    }
+
+    @include mq(desk) {
+      width: 270px;
+    }
+  }
+
+  &:last-child {
+    @include mq(desk) {
+      flex-basis: 260px;
+    }
+  }
+}
+
+.info-icons {
+  position: absolute;
+  bottom: 4px;
+  right: 0;
+}

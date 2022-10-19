@@ -1,34 +1,35 @@
-// utils styles
-@import './utils/vars';
-// @import './utils/normalize';
-@import './utils/visually-hidden';
+// Utils styles
+@import './utils/variables';
+@import './utils/vasuslly-hidden';
+@import './utils/animations';
 @import './utils/placeholders';
 @import './utils/mixins';
 
-// base styles
+// Base styles
+@import './base/common';
 @import './base/reset';
-@import './base/base';
 @import './base/container';
 @import './base/card-set';
 
-// layout styles
+// Components styles
+@import './components/logo';
+@import './components/button';
+@import './components/media';
+@import './components/slider';
+@import './components/socials';
+@import './components/modal';
+@import './components/forms/module';
+@import './components/mobile-menu';
+
+// Layouts styles
 @import './layouts/header';
-@import './layouts/navigation';
+@import './layouts/nav';
 @import './layouts/hero';
 @import './layouts/about';
 @import './layouts/price';
 @import './layouts/benefits';
 @import './layouts/team';
 @import './layouts/gallery';
+@import './layouts/booking';
 @import './layouts/contacts';
 @import './layouts/footer';
-
-// components styles
-@import './components/btn';
-@import './components/media-links';
-@import './components/logo';
-@import './components/slider';
-@import './components/socials';
-@import './components/modal';
-@import './components/register-form';
-@import './components/menu';

@@ -1,21 +1,18 @@
 .benefits {
-  @extend %section;
+  @include section;
 }
 
 .benefits-container {
-  @media screen and (min-width: 1200px) {
-    display: flex;
+  display: flex;
+  flex-direction: column-reverse;
+
+  @include mq(desk) {
+    flex-direction: row;
   }
 }
 
 .benefits-left-side {
-  @media screen and (max-width: 1199px) {
-    margin-top: 44px;
-  }
-  @media screen and (min-width: 1200px) {
-    flex-basis: 50%;
-    order: -1;
-  }
+  flex-basis: 50%;
 }
 
 .benefits-list {
@@ -28,11 +25,11 @@
 
   margin-left: auto;
 
-  @media screen and (max-width: 767px) {
+  @include mq(mob-only) {
     margin-right: auto;
   }
 
-  @media screen and (min-width: 1200px) {
+  @include mq(desk) {
     margin-right: auto;
   }
 }
@@ -44,57 +41,47 @@
 
   text-align: center;
 
-  background-color: #f7f7f7;
+  background: var(--light-bg-cl);
 
-  // &:not(:last-child) {
-  //   margin-bottom: 30px;
-
-  //   @include mq(mob) {
-  //     margin: 0;
-  //   }
-  // }
+  &:not(:last-child) {
+    margin-bottom: 30px;
+    @include mq(mob) {
+      margin: 0;
+    }
+  }
 
   &:nth-child(2n) {
-    @media screen and (min-width: 480px) {
+    @include mq(mob) {
       margin-top: 30px;
       margin-left: 30px;
     }
   }
 }
 
-.benefits-item:nth-child(even) {
-  margin-top: 30px;
-  margin-left: 30px;
-}
-
 .benefits-quantity {
   position: relative;
-
   display: inline-block;
+
   font-weight: 700;
   font-size: 42px;
   line-height: calc(57 / 42);
+  text-align: center;
   letter-spacing: 0.05em;
 
   color: #303030;
 }
 
-.benefits-quantity:after {
-  content: '\002B';
-
+.benefits-decor {
   position: absolute;
   top: 0;
   right: 0;
-  transform: translateX(15px) translateY(7px);
+  transform: translate(15px, 7px);
 
   font-weight: 600;
   font-size: 16px;
   line-height: calc(22 / 16);
+  text-align: center;
   color: #ff6c00;
-}
-
-.benefits-right-side {
-  max-width: 500px;
 }
 
 .benefits-text {
@@ -104,4 +91,12 @@
   text-align: center;
 
   color: #303030;
+}
+
+.benefits-right-side {
+  max-width: 500px;
+
+  @include mq(not-desk) {
+    margin-bottom: 44px;
+  }
 }

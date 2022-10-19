@@ -1,0 +1,22 @@
+.booking-form-label {
+  position: absolute;
+  bottom: 8px;
+  left: 0;
+  transform-origin: left center;
+
+  font-weight: 600;
+  font-size: 11px;
+  line-height: calc(15 / 11);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+
+  color: var(--grey-cl-40);
+
+  transition: color var(--anim-fast), transform var(--anim-fast);
+}
+
+.booking-form-input:focus + .booking-form-label,
+.booking-form-input:not(:placeholder-shown) + .booking-form-label {
+  color: var(--light-txt-cl);
+  transform: translateY(-20px) scale(0.8);
+}

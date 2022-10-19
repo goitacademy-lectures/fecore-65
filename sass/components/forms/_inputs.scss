@@ -1,0 +1,36 @@
+.booking-form-input {
+  width: 100%;
+  height: 24px;
+  padding-right: 22px;
+
+  font-size: 14px;
+  color: var(--light-txt-cl);
+
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid var(--grey-cl-40);
+  outline: transparent;
+
+  transition: border-color var(--anim-fast);
+}
+
+.booking-form-input:focus,
+.booking-form-input:not(:placeholder-shown) {
+  border-color: var(--border-light-cl);
+}
+
+.booking-form-input:not(:placeholder-shown):invalid:required {
+  border-color: rgb(255, 187, 0);
+}
+
+.booking-form-input:not(:placeholder-shown):valid:required {
+  border-color: rgb(0, 164, 57);
+}
+
+.booking-form-input::placeholder {
+  transition: opacity var(--anim-fast);
+  opacity: 0;
+}
+.booking-form-input:focus::placeholder {
+  opacity: 1;
+}

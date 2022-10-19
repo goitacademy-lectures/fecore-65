@@ -1,0 +1,38 @@
+.btn {
+  max-width: 180px;
+  min-width: 160px;
+  min-height: 40px;
+  padding-top: 11px;
+  padding-bottom: 11px;
+
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: calc(16 / 12);
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--main-txt-cl);
+
+  border: 1px solid #ff6c00;
+  border-radius: 25px;
+  background-color: transparent;
+  cursor: pointer;
+
+  transition: background-color var(--anim-fast);
+
+  &:hover,
+  &:focus {
+    background-color: var(--accent-bg-cl);
+  }
+
+  &--theme-dark {
+    color: var(--light-txt-cl);
+
+    transition: background-color var(--anim-fast), color var(--anim-fast);
+
+    &:hover,
+    &:focus {
+      background-color: var(--accent-bg-cl);
+    }
+  }
+}

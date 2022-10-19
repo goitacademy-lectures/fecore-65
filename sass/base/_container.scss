@@ -1,26 +1,19 @@
 .container {
-  // breakpoints:
-  // mobile - 480px
-  // tablet - 768px
-  // desktop - 1200px
+  // outline: 2px solid red;
+  // outline-offset: -2px;
 
-  // content 418px + 30px padding
-  max-width: 448px;
-  padding-left: 15px;
-  padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
 
-  outline: 2px solid red;
-  outline-offset: -2px;
-
-  // desktop styles
-  @media screen and (min-width: 768px) {
-    max-width: 720px;
+  @include mq(mob) {
+    width: 448px;
   }
-
-  // desktop styles
-  @media screen and (min-width: 1200px) {
-    max-width: 1200px;
+  @include mq(tab) {
+    width: 720px;
+  }
+  @include mq(desk) {
+    width: 1200px;
   }
 }
